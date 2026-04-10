@@ -103,8 +103,8 @@ img {
 }
 
 .hero-photo {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 16px;
   object-fit: cover;
   flex-shrink: 0;
@@ -123,6 +123,7 @@ img {
   color: var(--secondary);
   line-height: 1.7;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .hero-bio strong {
@@ -144,7 +145,7 @@ img {
   gap: 4px;
   color: var(--secondary);
   font-size: 14px;
-  font-weight: 450;
+  font-weight: 600;
   padding-bottom: 1px;
   background-image: linear-gradient(var(--foreground), var(--foreground));
   background-repeat: no-repeat;
@@ -498,8 +499,8 @@ img {
   }
 
   .hero-photo {
-    width: 96px;
-    height: 96px;
+    width: 120px;
+    height: 120px;
   }
 
   .hero-links {
