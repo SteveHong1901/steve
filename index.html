@@ -1,501 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steve Hong - Quantitative Trader & Researcher</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steve Hong</title>
+  <meta name="description" content="Quantitative Trader & ML Researcher. Building trading strategies at DV Trading. Personal research on efficient inference and alignment for LLMs.">
 
-    <!-- React & ReactDOM & Babel -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-slate-50">
-    <div id="root"></div>
+<body>
 
-    <script type="text/babel" data-type="module">
-        import React, { useState, useEffect } from 'https://esm.sh/react@18.2.0';
-        import { createRoot } from 'https://esm.sh/react-dom@18.2.0/client';
-        import { Mail, Github, Linkedin, Twitter, FileText, Download, ExternalLink, ChevronRight, BookOpen, GraduationCap, Briefcase, Code, Terminal } from 'https://esm.sh/lucide-react@0.263.1';
+<main class="page">
 
-        const Portfolio = () => {
-            const [activeSection, setActiveSection] = useState('research');
-            const [scrolled, setScrolled] = useState(false);
+  <!-- ── Hero ─────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Steve Hong</h1>
+        <p class="hero-bio">
+          My personal research focuses on efficient inference and alignment techniques for LLMs.
+          Currently building trading strategies at <strong>DV Trading LLC</strong>.
+        </p>
+        <p class="hero-bio">
+          I grew up in <a class="link link-subtle" href="https://www.nomadicnotes.com/notes-on-soc-trang/" target="_blank" rel="noopener noreferrer">S&#243;c Tr&#259;ng, Vietnam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>, and I'm based in London at the moment. I really enjoy analysing and building things &ndash; I got the same feeling from disassembling <a class="link link-subtle" href="https://saigoneer.com/saigon-technology/27144-honda-to-cease-production-of-super-cub-50cc,-vietnam-s-beloved-bike,-in-november" target="_blank" rel="noopener noreferrer">Honda Super Cubs<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a> as a kid that I get from a hard technical problem now. I care a lot about collaboration and working with people I can learn from. Always trying to pick the right problems to spend time on.
+        </p>
+        <div class="hero-links">
+          <a class="link" href="https://scholar.google.com/citations?user=5eHjRVUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+            Google Scholar
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+          <a class="link" href="https://github.com/SteveHong1901" target="_blank" rel="noopener noreferrer">
+            GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+          <a class="link" href="https://linkedin.com/in/steve-hong-1901" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+          <a class="link" href="https://x.com/steve_steve_hg" target="_blank" rel="noopener noreferrer">
+            X
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+      <img class="hero-photo" src="imgs/7BD5A4B3-FF48-4BE7-8097-AE6953C1ED6E.jpeg" alt="Steve Hong">
+    </div>
+  </section>
 
-            // Handle scroll effect for navbar
-            useEffect(() => {
-                const handleScroll = () => {
-                setScrolled(window.scrollY > 20);
-                };
-                window.addEventListener('scroll', handleScroll);
-                return () => window.removeEventListener('scroll', handleScroll);
-            }, []);
+  <!-- ── 01 Research ──────────────────────────────────── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title">Research</h2>
+    </div>
 
-            const scrollToSection = (id) => {
-                const element = document.getElementById(id);
-                if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-                setActiveSection(id);
-                }
-            };
+    <div class="research-list">
 
-            // Custom SVG placeholders for research figures
-            const MatrixIcon = () => (
-                <svg viewBox="0 0 100 100" className="w-full h-full bg-slate-50 p-2 rounded">
-                <rect x="10" y="10" width="20" height="20" className="fill-blue-200" />
-                <rect x="40" y="10" width="20" height="20" className="fill-blue-300" />
-                <rect x="70" y="10" width="20" height="20" className="fill-blue-400" />
-                <rect x="10" y="40" width="20" height="20" className="fill-blue-300" />
-                <rect x="40" y="40" width="20" height="20" className="fill-blue-500" />
-                <rect x="70" y="40" width="20" height="20" className="fill-blue-600" />
-                <rect x="10" y="70" width="20" height="20" className="fill-blue-400" />
-                <rect x="40" y="70" width="20" height="20" className="fill-blue-600" />
-                <rect x="70" y="70" width="20" height="20" className="fill-blue-800" />
-                </svg>
-            );
+      <!-- Paper 1 -->
+      <a class="research-card" href="https://arxiv.org/pdf/2509.23437" target="_blank" rel="noopener noreferrer">
+        <div class="research-venue">
+          <span class="tag tag-accent">NeurIPS MechInterp (Spotlight)</span>
+          <span class="research-year">2025</span>
+        </div>
+        <h3 class="research-title">Studying the Impact of Curvature Approximations in Influence Functions</h3>
+        <p class="research-desc">
+          Decomposed K-FAC into three approximation layers (GGN, block-diagonal, Kronecker factorisation) and evaluated each assumption's strength across training stage, depth, and width. Formalised block heterogeneity as a criterion for damping choice and stress-tested methods via activation scaling.
+        </p>
+        <div class="research-tags">
+          <span class="tag">LLMs</span>
+          <span class="tag">Influence Functions</span>
+          <span class="tag">Training Dynamics</span>
+        </div>
+      </a>
 
-            const DiffusionIcon = () => (
-                <svg viewBox="0 0 100 100" className="w-full h-full bg-slate-50 p-2 rounded">
-                <circle cx="20" cy="50" r="15" className="fill-slate-200 blur-sm" />
-                <path d="M 35 50 L 45 50" stroke="#94a3b8" strokeWidth="2" markerEnd="url(#arrow)" />
-                <circle cx="50" cy="50" r="12" className="fill-indigo-300 blur-[2px]" />
-                <path d="M 62 50 L 72 50" stroke="#94a3b8" strokeWidth="2" markerEnd="url(#arrow)" />
-                <circle cx="80" cy="50" r="10" className="fill-indigo-600" />
-                <defs>
-                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-                    <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8" />
-                    </marker>
-                </defs>
-                </svg>
-            );
+      <!-- Paper 2 -->
+      <a class="research-card" href="https://arxiv.org/pdf/2510.02826" target="_blank" rel="noopener noreferrer">
+        <div class="research-venue">
+          <span class="tag tag-accent">NeurIPS SPIGM</span>
+          <span class="research-year">2025</span>
+        </div>
+        <h3 class="research-title">Multi-scale AR Models are Laplacian, Discrete, and Latent Diffusion Models in Disguise</h3>
+        <p class="research-desc">
+          Introduced an iterative refinement view to VAR models and linked it formally to diffusion. Led problem framing and theory write-up. Co-built the end-to-end pipeline covering tokenization, latent pyramids, and sampling with targeted ablations on refinement bands and target types.
+        </p>
+        <div class="research-tags">
+          <span class="tag">Diffusion Models</span>
+          <span class="tag">Multi-Scale Models</span>
+        </div>
+      </a>
 
-            const GraphIcon = () => (
-                <svg viewBox="0 0 100 100" className="w-full h-full bg-slate-50 p-2 rounded">
-                <line x1="20" y1="20" x2="50" y2="50" stroke="#cbd5e1" strokeWidth="2" />
-                <line x1="50" y1="50" x2="80" y2="20" stroke="#cbd5e1" strokeWidth="2" />
-                <line x1="50" y1="50" x2="50" y2="80" stroke="#cbd5e1" strokeWidth="2" />
-                <line x1="20" y1="20" x2="80" y2="20" stroke="#cbd5e1" strokeWidth="2" />
-                <circle cx="20" cy="20" r="8" className="fill-emerald-500" />
-                <circle cx="80" cy="20" r="8" className="fill-emerald-500" />
-                <circle cx="50" cy="50" r="10" className="fill-emerald-700" />
-                <circle cx="50" cy="80" r="8" className="fill-emerald-500" />
-                </svg>
-            );
+      <!-- Paper 3 -->
+      <a class="research-card" href="https://arxiv.org/pdf/2503.23612" target="_blank" rel="noopener noreferrer">
+        <div class="research-venue">
+          <span class="tag tag-accent">ICML GenBio</span>
+          <span class="research-year">2025</span>
+        </div>
+        <h3 class="research-title">Diffusion-Free Graph Generation with Next-Scale Prediction</h3>
+        <p class="research-desc">
+          Researched an efficient framework for graph generation using multi-scale models, advised by Petar Veli&#269;kovi&#263; and Pietro Li&#242;. Co-implemented the VQ-VAE, Transformer, and evaluation pipeline.
+        </p>
+        <div class="research-tags">
+          <span class="tag">Graph Neural Networks</span>
+          <span class="tag">Bioinformatics</span>
+        </div>
+      </a>
 
-            const SignalIcon = () => (
-                <svg viewBox="0 0 100 100" className="w-full h-full bg-slate-50 p-2 rounded">
-                <path d="M 10 50 Q 25 10 40 50 T 70 50 T 100 50" fill="none" stroke="#e2e8f0" strokeWidth="2" />
-                <path d="M 10 50 Q 25 30 40 50 T 70 50 T 100 50" fill="none" stroke="#3b82f6" strokeWidth="2" />
-                <circle cx="40" cy="50" r="3" className="fill-blue-600" />
-                <circle cx="70" cy="50" r="3" className="fill-blue-600" />
-                <rect x="10" y="80" width="80" height="10" className="fill-slate-200" rx="2" />
-                </svg>
-            );
+      <!-- Paper 4 -->
+      <a class="research-card" href="https://arxiv.org/pdf/2505.09026" target="_blank" rel="noopener noreferrer">
+        <div class="research-venue">
+          <span class="tag tag-accent">Energy Reports Journal</span>
+          <span class="research-year">2024</span>
+        </div>
+        <h3 class="research-title">Wind Power Modelling via Heteroscedastic Non-Stationary Gaussian Processes</h3>
+        <p class="research-desc">
+          Developed three novel non-stationary multi-task Gaussian Process kernels to capture wind dynamics. Contributed a package for the Non-Stationary Spectral kernel with improved out-of-sample forecasting.
+        </p>
+        <div class="research-tags">
+          <span class="tag">Gaussian Processes</span>
+          <span class="tag">Energy</span>
+        </div>
+      </a>
 
-            return (
-                <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
-                
-                {/* Navigation */}
-                <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
-                    <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-                    <div className="font-serif text-xl font-bold tracking-tight text-slate-800">
-                        SH<span className="text-indigo-600">.</span>
-                    </div>
-                    <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                        {['About', 'Research', 'Experience', 'Education'].map((item) => (
-                        <button 
-                            key={item}
-                            onClick={() => scrollToSection(item.toLowerCase())}
-                            className={`hover:text-indigo-600 transition-colors ${activeSection === item.toLowerCase() ? 'text-indigo-600' : ''}`}
-                        >
-                            {item}
-                        </button>
-                        ))}
-                    </div>
-                    <a href="mailto:stevehongforwork@gmail.com" className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-full hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg">
-                        Get in Touch
-                    </a>
-                    </div>
-                </nav>
+    </div>
+  </section>
 
-                {/* Hero Section */}
-                <header className="pt-32 pb-20 md:pt-48 md:pb-32 px-6 bg-white">
-                    <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                    <div className="flex-1">
-                        <h1 className="font-serif text-5xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
-                            Steve Hong
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl mb-10">
-                            My personal research focuses on efficient inference and alignment techniques for LLMs. Currently building trading strategies at <span className="font-medium text-slate-900">DV Trading LLC</span>.
-                        </p>
-                        
-                        <div className="flex flex-wrap gap-4">
-                            <a href="https://scholar.google.com/citations?user=5eHjRVUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all hover:-translate-y-1">
-                            <GraduationCap size={18} />
-                            <span>Google Scholar</span>
-                            </a>
-                            <a href="https://github.com/SteveHong1901" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-3 bg-white border border-slate-200 text-slate-700 rounded-lg hover:border-indigo-300 hover:text-indigo-600 transition-all hover:-translate-y-1">
-                            <Github size={18} />
-                            <span>GitHub</span>
-                            </a>
-                            <a href="https://linkedin.com/in/steve-hong-1901" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-3 bg-white border border-slate-200 text-slate-700 rounded-lg hover:border-indigo-300 hover:text-indigo-600 transition-all hover:-translate-y-1">
-                            <Linkedin size={18} />
-                            <span>LinkedIn</span>
-                            </a>
-                            <a href="https://x.com/quant_ghibli" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-3 bg-white border border-slate-200 text-slate-700 rounded-lg hover:border-indigo-300 hover:text-indigo-600 transition-all hover:-translate-y-1">
-                            <Twitter size={18} />
-                            <span>X</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div className="w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
-                        <img 
-                            src="imgs/7BD5A4B3-FF48-4BE7-8097-AE6953C1ED6E.jpeg" 
-                            alt="Steve Hong" 
-                            className="w-full h-full object-cover rounded-2xl shadow-lg"
-                        />
-                    </div>
-                    </div>
-                </header>
+  <!-- ── 02 Experience ────────────────────────────────── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Experience</h2>
+    </div>
 
-                {/* Research Section */}
-                <section id="research" className="py-20 px-6 bg-slate-50">
-                    <div className="max-w-4xl mx-auto">
-                    <div className="flex items-center gap-4 mb-12">
-                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900">Selected Research</h2>
-                        <div className="h-px bg-slate-300 flex-grow"></div>
-                    </div>
+    <div class="timeline">
 
-                    <div className="space-y-12">
-                        {/* Paper 1 */}
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all group">
-                        <div className="flex flex-col md:flex-row gap-8">
-                            <div className="w-full md:w-48 h-48 flex-shrink-0 bg-slate-50 rounded-xl border border-slate-100 overflow-hidden relative">
-                            {/* Placeholder for Key Figure */}
-                            <MatrixIcon />
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/5 transition-opacity">
-                                <span className="text-xs font-semibold bg-white px-2 py-1 rounded shadow-sm text-slate-700">Key Figure</span>
-                            </div>
-                            </div>
-                            <div>
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="px-2 py-1 rounded text-xs bg-indigo-100 text-indigo-700"><span className="font-bold text-sm">NeurIPS</span> <span className="font-light">MechInterp (Spotlight)</span></span>
-                                <span className="text-slate-400 text-sm">2025</span>
-                            </div>
-                            <a href="https://arxiv.org/pdf/2509.23437" target="_blank" rel="noopener noreferrer">
-                                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                                    Studying the Impact of Curvature Approximations in Influence Functions
-                                </h3>
-                            </a>
-                            <p className="text-slate-600 mb-4 leading-relaxed">
-                                Investigated the K-FAC approximation by decomposing it into GGN, block-diagonal, and Kronecker factorization layers. Experiments revealed Kronecker factorization as the dominant factor, leading to formalized criteria for damping choices and stress-testing via activation scaling.
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                                <span className="inline-flex items-center text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Deep Learning</span>
-                                <span className="inline-flex items-center text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Optimization</span>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+      <div class="timeline-item">
+        <div class="timeline-dot-col">
+          <div class="timeline-dot active"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-role">Quantitative Trader</div>
+          <div class="timeline-meta"><strong>DV Trading LLC</strong></div>
+          <div class="timeline-date">May 2025 &ndash; Present</div>
+          <div class="timeline-desc">
+            Third hire building out research and execution infrastructure for the Base Metal desk. Researching filtering and momentum aggregation tools for intraday CTA strategies. Implementing pipelines for PnL attribution, volatility surface fitting, and option book risk evaluation.
+          </div>
+        </div>
+      </div>
 
-                        {/* Paper 2 */}
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all group">
-                        <div className="flex flex-col md:flex-row gap-8">
-                            <div className="w-full md:w-48 h-48 flex-shrink-0 bg-slate-50 rounded-xl border border-slate-100 overflow-hidden relative">
-                            <DiffusionIcon />
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/5 transition-opacity">
-                                <span className="text-xs font-semibold bg-white px-2 py-1 rounded shadow-sm text-slate-700">Key Figure</span>
-                            </div>
-                            </div>
-                            <div>
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="px-2 py-1 rounded text-xs bg-indigo-100 text-indigo-700"><span className="font-bold text-sm">NeurIPS</span> <span className="font-light">SPIGM</span></span>
-                                <span className="text-slate-400 text-sm">2025</span>
-                            </div>
-                            <a href="https://arxiv.org/pdf/2510.02826" target="_blank" rel="noopener noreferrer">
-                                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                                    Multi-scale AR Models are Laplacian, Discrete, and Latent Diffusion Models in Disguise
-                                </h3>
-                            </a>
-                            <p className="text-slate-600 mb-4 leading-relaxed">
-                                Proposed an iterative refinement view linking VAR models formally to diffusion processes. Developed an end-to-end pipeline with tokenization and latent pyramids, establishing practical speed-quality guidelines through targeted ablations on refinement bands and target types.
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                                <span className="inline-flex items-center text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Generative AI</span>
-                                <span className="inline-flex items-center text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Diffusion Models</span>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+      <div class="timeline-item">
+        <div class="timeline-dot-col">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-role">Quantitative Trading Intern</div>
+          <div class="timeline-meta"><strong>DV Trading LLC</strong></div>
+          <div class="timeline-date">Sep 2024 &ndash; May 2025</div>
+          <div class="timeline-desc">
+            Researched trade signals for Gold, Silver, and Platinum on the Precious Metals desk. Developed a customised ML model to upscale COT signal from weekly to daily. Researched pair trading strategies for Precious Metals and FX futures using DTW-based clustering.
+          </div>
+        </div>
+      </div>
 
-                        {/* Paper 3 */}
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all group">
-                        <div className="flex flex-col md:flex-row gap-8">
-                            <div className="w-full md:w-48 h-48 flex-shrink-0 bg-slate-50 rounded-xl border border-slate-100 overflow-hidden relative">
-                            <GraphIcon />
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/5 transition-opacity">
-                                <span className="text-xs font-semibold bg-white px-2 py-1 rounded shadow-sm text-slate-700">Key Figure</span>
-                            </div>
-                            </div>
-                            <div>
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="px-2 py-1 rounded text-xs bg-emerald-100 text-emerald-700"><span className="font-bold text-sm">ICML</span> <span className="font-light">GenBio</span></span>
-                                <span className="text-slate-400 text-sm">2025</span>
-                            </div>
-                            <a href="https://arxiv.org/pdf/2503.23612" target="_blank" rel="noopener noreferrer">
-                                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                                    Diffusion-Free Graph Generation with Next-Scale Prediction
-                                </h3>
-                            </a>
-                            <p className="text-slate-600 mb-4 leading-relaxed">
-                                Developed an efficient, interpretable framework for graph generation using multi-scale models, advised by Petar Veličković and Pietro Liò. The approach achieved a 12x boost in inference speed with minimal performance cost by utilizing VQ-VAE and Transformer architectures.
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                                <span className="inline-flex items-center text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Graph Neural Networks</span>
-                                <span className="inline-flex items-center text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Bioinformatics</span>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+      <div class="timeline-item">
+        <div class="timeline-dot-col">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-role">Data Science Summer Analyst</div>
+          <div class="timeline-meta"><strong>J.P. Morgan &amp; Chase</strong></div>
+          <div class="timeline-date">Jun 2024 &ndash; Aug 2024</div>
+          <div class="timeline-desc">
+            Identified investment opportunities by clustering client profiles against current positions. Enhanced Wealth Score prediction using XGBoost on high-dimensional datasets. Designed Tableau dashboards for client profile analysis across EMEA, APAC, and LATAM.
+          </div>
+        </div>
+      </div>
 
-                        {/* Paper 4 */}
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all group">
-                        <div className="flex flex-col md:flex-row gap-8">
-                            <div className="w-full md:w-48 h-48 flex-shrink-0 bg-slate-50 rounded-xl border border-slate-100 overflow-hidden relative">
-                            <SignalIcon />
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/5 transition-opacity">
-                                <span className="text-xs font-semibold bg-white px-2 py-1 rounded shadow-sm text-slate-700">Key Figure</span>
-                            </div>
-                            </div>
-                            <div>
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="px-2 py-1 rounded text-xs font-bold bg-amber-100 text-amber-700">Energy Reports Journal</span>
-                                <span className="text-slate-400 text-sm">2024</span>
-                            </div>
-                            <a href="https://arxiv.org/pdf/2505.09026" target="_blank" rel="noopener noreferrer">
-                                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                                    Wind Power Modelling via Heteroscedastic Non-Stationary Gaussian Processes
-                                </h3>
-                            </a>
-                            <p className="text-slate-600 mb-4 leading-relaxed">
-                                Created three novel non-stationary multi-task Gaussian Process kernels to better capture wind dynamics. The resulting method reduced out-of-sample RMSE by approximately 20% compared to standard baselines, contributing a new package for the Non-Stationary Spectral kernel.
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                                <span className="inline-flex items-center text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Gaussian Processes</span>
-                                <span className="inline-flex items-center text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">Energy</span>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+      <div class="timeline-item">
+        <div class="timeline-dot-col">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-role">Data Science Summer Analyst</div>
+          <div class="timeline-meta"><strong>J.P. Morgan &amp; Chase</strong></div>
+          <div class="timeline-date">Jun 2023 &ndash; Aug 2023</div>
+          <div class="timeline-desc">
+            Developed a document classification model leveraging LLMs for investment content analysis. Fine-tuned FinBERT with LoRA for financial named entity recognition, focusing on reducing task forgetting. Implemented the full data pipeline from ingestion to deployment.
+          </div>
+        </div>
+      </div>
 
-                    </div>
-                    </div>
-                </section>
+    </div>
+  </section>
 
-                {/* Experience Section */}
-                <section id="experience" className="py-20 px-6 bg-white">
-                    <div className="max-w-4xl mx-auto">
-                    <div className="flex items-center gap-4 mb-12">
-                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900">Professional Experience</h2>
-                        <div className="h-px bg-slate-300 flex-grow"></div>
-                    </div>
+  <!-- ── 03 Education ─────────────────────────────────── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Education</h2>
+    </div>
 
-                    <div className="relative border-l-2 border-slate-200 ml-3 space-y-12">
-                        
-                        <div className="relative pl-8">
-                        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
-                        <div className="mb-2">
-                            <h3 className="text-xl font-bold text-slate-900">Quantitative Trader</h3>
-                            <div className="flex flex-wrap gap-2 text-sm text-slate-500 mt-1">
-                            <span className="font-medium text-indigo-600">DV Trading LLC</span>
-                            <span>•</span>
-                            <span>May 2025 - Present</span>
-                            </div>
-                        </div>
-                        <p className="text-slate-600 mb-3">
-                            Collaborating with Base Metals desk to research signal frameworks. Developing Fair Value strategies via customised linear models and building end-to-end pipelines for CME/LME data processing and live strategy dashboards.
-                        </p>
-                        </div>
+    <div class="edu-grid">
 
-                        <div className="relative pl-8">
-                        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 ring-4 ring-white"></div>
-                        <div className="mb-2">
-                            <h3 className="text-xl font-bold text-slate-900">Quantitative Trading Intern</h3>
-                            <div className="flex flex-wrap gap-2 text-sm text-slate-500 mt-1">
-                            <span className="font-medium text-slate-900">DV Trading LLC</span>
-                            <span>•</span>
-                            <span>Sep 2024 - May 2025</span>
-                            </div>
-                        </div>
-                        <p className="text-slate-600 mb-3">
-                            Researched trade signals for Precious Metals desk. Developed ML models for signal upscaling (30% RMSE improvement) and researched pair trading strategies using DTW-based clustering.
-                        </p>
-                        </div>
+      <div class="edu-card">
+        <div class="edu-school">University of Cambridge</div>
+        <div class="edu-degree">MPhil Machine Learning &amp; Machine Intelligence</div>
+        <div class="edu-date">2024 &ndash; 2025</div>
+        <div class="edu-grade">Distinction</div>
+        <div class="edu-details">
+          Published 3 papers. Thesis on Hessian approximation for influence functions, supervised by <strong>Prof. Richard Turner</strong>, <strong>Runa Eschenhagen</strong>, and <strong>Bruno Mlodozeniec</strong>. Coursework in Deep Learning, Geometric Deep Learning, Efficient Transformers, Time Series, and Generative Modeling.
+        </div>
+      </div>
 
-                        <div className="relative pl-8">
-                        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 ring-4 ring-white"></div>
-                        <div className="mb-2">
-                            <h3 className="text-xl font-bold text-slate-900">Data Science Summer Analyst</h3>
-                            <div className="flex flex-wrap gap-2 text-sm text-slate-500 mt-1">
-                            <span className="font-medium text-slate-900">J.P. Morgan & Chase</span>
-                            <span>•</span>
-                            <span>Jun 2024 - Aug 2024</span>
-                            </div>
-                        </div>
-                        <p className="text-slate-600 mb-3">
-                            Identified $3bn in investment opportunities via client profile clustering. Enhanced Wealth Score prediction by 15% using XGBoost on high-dimensional datasets.
-                        </p>
-                        </div>
+      <div class="edu-card">
+        <div class="edu-school">University College London</div>
+        <div class="edu-degree">BSc Statistics</div>
+        <div class="edu-date">2021 &ndash; 2024</div>
+        <div class="edu-grade">First-Class Honours (Best Dissertation Award)</div>
+        <div class="edu-details">
+          Top marks in 10 modules. Modules in Statistics, Machine Learning, Probability Theory, Bayesian Statistics, Stochastic Calculus, and Time Series Methods.
+        </div>
+      </div>
 
-                        <div className="relative pl-8">
-                        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 ring-4 ring-white"></div>
-                        <div className="mb-2">
-                            <h3 className="text-xl font-bold text-slate-900">Data Science Summer Analyst</h3>
-                            <div className="flex flex-wrap gap-2 text-sm text-slate-500 mt-1">
-                            <span className="font-medium text-slate-900">J.P. Morgan & Chase</span>
-                            <span>•</span>
-                            <span>Jun 2023 - Aug 2023</span>
-                            </div>
-                        </div>
-                        <p className="text-slate-600 mb-3">
-                            Sped up investment content analyses by 10% using LLMs. Fine-tuned FinBERT with LoRA for financial NER achieving 20% better F1 scores.
-                        </p>
-                        </div>
+    </div>
+  </section>
 
-                    </div>
-                    </div>
-                </section>
+  <!-- ── 04 Skills ────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title">Skills</h2>
+    </div>
 
-                {/* Education Section */}
-                <section id="education" className="py-20 px-6 bg-slate-50">
-                    <div className="max-w-4xl mx-auto">
-                    <div className="flex items-center gap-4 mb-12">
-                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900">Education</h2>
-                        <div className="h-px bg-slate-300 flex-grow"></div>
-                    </div>
+    <div class="skills-grid">
+      <div class="skill-box">
+        <div class="skill-box-title">Libraries / Tools</div>
+        <ul>
+          <li>PyTorch</li>
+          <li>PyG / GPyTorch</li>
+          <li>Pandas / NumPy</li>
+          <li>PySpark</li>
+          <li>Hydra / HPC</li>
+          <li>Bloomberg API</li>
+          <li>React / Dash / Flask</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <div class="skill-box-title">Languages</div>
+        <ul>
+          <li>English</li>
+          <li>Vietnamese</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <div class="skill-box-title">Interests</div>
+        <ul>
+          <li>Badminton</li>
+          <li>Photography</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
-                            <GraduationCap size={24} />
-                            </div>
-                            <div>
-                            <h3 className="font-bold text-slate-900">University of Cambridge</h3>
-                            <p className="text-sm text-slate-500">2024 - 2025</p>
-                            </div>
-                        </div>
-                        <p className="font-medium text-lg text-slate-800 mb-2">MPhil Machine Learning & Machine Intelligence</p>
-                        <p className="text-slate-600 text-sm mb-4">Grade: Distinction</p>
-                        <p className="text-slate-600 text-sm leading-relaxed">
-                            Thesis on Hessian approximation for influence functions. Coursework in Efficient Transformers, Diffusion and Flow-based models, GPU Parallelism, Kernel Methods, and Geometric Deep Learning.
-                        </p>
-                        </div>
+  <!-- ── 05 Contact ───────────────────────────────────── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2 class="section-title">Contact</h2>
+    </div>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
-                            <BookOpen size={24} />
-                            </div>
-                            <div>
-                            <h3 className="font-bold text-slate-900">University College London</h3>
-                            <p className="text-sm text-slate-500">2021 - 2024</p>
-                            </div>
-                        </div>
-                        <p className="font-medium text-lg text-slate-800 mb-2">BSc Statistics</p>
-                        <p className="text-slate-600 text-sm mb-4">First-Class Honours (Best Dissertation Award)</p>
-                        <p className="text-slate-600 text-sm leading-relaxed">
-                            Modules in Bayesian Statistics, Stochastic Calculus, Time Series Methods. Collaborated on 15+ technical projects.
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </section>
+    <div class="contact-row">
+      <span class="contact-item" style="cursor: default;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        stevehongforwork [at] gmail [dot] com
+      </span>
+      <a class="contact-item" href="https://github.com/SteveHong1901" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a class="contact-item" href="https://linkedin.com/in/steve-hong-1901" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a class="contact-item" href="https://x.com/steve_steve_hg" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X
+      </a>
+    </div>
+  </section>
 
-                {/* Skills Section */}
-                <section className="py-20 px-6 bg-white">
-                    <div className="max-w-4xl mx-auto">
-                    <div className="flex items-center gap-4 mb-8">
-                        <h2 className="font-serif text-2xl font-bold text-slate-900">Technical Skills</h2>
-                        <div className="h-px bg-slate-200 flex-grow"></div>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
-                        <h4 className="font-bold text-slate-700 mb-2 flex items-center gap-2"><Code size={16}/> Languages</h4>
-                        <ul className="text-sm text-slate-600 space-y-1">
-                            <li>Python</li>
-                            <li>SQL</li>
-                            <li>English</li>
-                            <li>Vietnamese</li>
-                        </ul>
-                        </div>
-                        <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
-                        <h4 className="font-bold text-slate-700 mb-2 flex items-center gap-2"><Terminal size={16}/> ML Libraries</h4>
-                        <ul className="text-sm text-slate-600 space-y-1">
-                            <li>PyTorch</li>
-                            <li>TensorFlow</li>
-                            <li>PyG</li>
-                            <li>GPyTorch</li>
-                        </ul>
-                        </div>
-                        <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
-                        <h4 className="font-bold text-slate-700 mb-2 flex items-center gap-2"><Briefcase size={16}/> Tools</h4>
-                        <ul className="text-sm text-slate-600 space-y-1">
-                            <li>Pandas / NumPy</li>
-                            <li>PySpark</li>
-                            <li>Bloomberg API</li>
-                            <li>Dash / Flask</li>
-                        </ul>
-                        </div>
-                        <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
-                        <h4 className="font-bold text-slate-700 mb-2 flex items-center gap-2"><FileText size={16}/> Interests</h4>
-                        <ul className="text-sm text-slate-600 space-y-1">
-                            <li>Badminton</li>
-                            <li>Photography</li>
-                            <li>Generative AI</li>
-                            <li>Quant Trading</li>
-                        </ul>
-                        </div>
-                    </div>
-                    </div>
-                </section>
+  <!-- ── Footer ───────────────────────────────────────── -->
+  <footer class="footer">
+    &copy; 2025 Steve Hong
+  </footer>
 
-                {/* Footer */}
-                <footer className="bg-slate-900 text-slate-400 py-12 px-6">
-                    <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-sm">
-                        © 2025 Steve Hong. All rights reserved.
-                    </div>
-                    <div className="flex gap-6">
-                        <a href="mailto:stevehongforwork@gmail.com" className="hover:text-white transition-colors"><Mail size={20} /></a>
-                        <a href="https://github.com/SteveHong1901" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Github size={20} /></a>
-                        <a href="https://linkedin.com/in/steve-hong-1901" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
-                        <a href="https://x.com/quant_ghibli" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Twitter size={20} /></a>
-                    </div>
-                    </div>
-                </footer>
+</main>
 
-                </div>
-            );
-        };
-
-        const root = createRoot(document.getElementById('root'));
-        root.render(<Portfolio />);
-    </script>
+<script src="js/main.js"></script>
 </body>
 </html>
