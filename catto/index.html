@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steve's Cat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafafa;
+      color: #171717;
+      min-height: 100vh;
+      padding: 3rem 1.5rem;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #666;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back:hover { color: #171717; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+    @media (max-width: 480px) {
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">&larr; back</a>
+    <h1>my cat</h1>
+    <div class="gallery">
+      <img src="DDEA79F6-78A1-46DF-BAAE-FF1E49074679_1_105_c.jpeg" alt="Cat">
+      <img src="74BA159B-80B2-4C6D-A9CD-64A0F518909F_1_105_c.jpeg" alt="Cat">
+      <img src="910BAC3E-3B47-4226-8301-FB730F88502E_1_105_c.jpeg" alt="Cat">
+      <img src="B09217B7-237B-4BE6-AE06-D3948B98E400_1_105_c.jpeg" alt="Cat">
+    </div>
+  </div>
+</body>
+</html>
