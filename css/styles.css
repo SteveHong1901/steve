@@ -265,6 +265,13 @@ img {
   letter-spacing: -0.01em;
 }
 
+.research-authors {
+  font-size: 13px;
+  color: var(--secondary);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
 .research-desc {
   font-size: 13px;
   color: var(--secondary);
