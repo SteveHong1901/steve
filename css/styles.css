@@ -487,6 +487,16 @@ img {
   color: var(--tertiary);
 }
 
+.visitor-map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.visitor-map > * {
+  max-width: 100%;
+}
+
 /* ── Arrow icon for external links ───────────────────── */
 .arrow-icon {
   display: inline-block;
