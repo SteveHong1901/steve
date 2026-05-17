@@ -491,10 +491,18 @@ img {
   display: flex;
   justify-content: center;
   margin-bottom: 24px;
+  position: relative;
 }
 
 .visitor-map > * {
   max-width: 100%;
+}
+
+.visitor-map-shield {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  cursor: default;
 }
 
 /* ── Arrow icon for external links ───────────────────── */
